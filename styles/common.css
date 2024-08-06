@@ -259,10 +259,6 @@ input:invalid{
     border: 1px solid #EA8E93
 }
 
-input:valid{
-    border: 1px solid #25DAA2;
-}
-
 @media(max-width: 1440px) {
     :root {
         --font-size-title-xl: calc((100vw - 375px)/(1440 - 375) * (96 - 48) + 48px);
@@ -300,10 +296,6 @@ input:valid{
 
     .btn_light:hover {
         background-color: transparent;
-    }
-
-    .close-btn:hover {
-        transform: none;
     }
 
     .button-slider:hover,

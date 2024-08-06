@@ -265,24 +265,28 @@ span.prompt__icon {
     flex-direction: column;
     justify-content: space-between;
     min-height: 400px;
-    overflow: hidden;
+    padding-left: 40px;
     position: relative;
 }
 
-.thanks__content::before {
+.thanks__body {
+    max-height: 100%;
+}
+
+.thanks__body::before {
     content: url(../assets/images/bg/modal-bg-top.png);
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 40%;
     transform: translate(-50%);
     z-index: -1;
 }
 
-.thanks__content::after {
+.thanks__body::after {
     content: url(../assets/images/bg/modal-bg-bottom.png);
     position: absolute;
-    bottom: -5px;
-    left: 50%;
+    top: 0;
+    left: 40%;
     z-index: -1;
 }
 
@@ -294,18 +298,11 @@ span.prompt__icon {
     margin: 0 0 0 auto;
 }
 
-
-@media(max-width: 1085px) {
-
-    .thanks__content::before {
-        left: 30%;
-    }
-    
-    .thanks__content::after {
-        left: 100%;
+@media(max-width: 1020px) {
+    .thanks__body::after {
+        left: 35%;
     }
 }
-
 
 @media(max-width: 1085px) {
     .topic__title {
@@ -338,17 +335,21 @@ span.prompt__icon {
         line-height: 45px;
     }
 
-    .thanks__content::before {
+    .thanks__body::before {
         content: url(../assets/images/bg/hero-small-bg-right.png);
         left: 100%;
         transform: translate(-100%);
-        top: 10%;
+        top: 20%;
     }
     
-    .thanks__content::after {
+    .thanks__body::after {
         content: url(../assets/images/bg/hero-small-bg-left.png);
         left: 0;
-        top: 30%;
+        top: 50%;
+    }
+
+    .thanks__content {
+        padding-left: 0;
     }
 }
 
@@ -387,7 +388,7 @@ span.prompt__icon {
 
 @media(max-width: 500px) {
     .modal {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         padding: 0;
     }
@@ -395,6 +396,7 @@ span.prompt__icon {
     .modal__content {
         padding: 60px 24px 24px 24px;
         min-height: 100vh;
+        width: 100%;
         border-radius: 0;
     }
 
@@ -424,5 +426,11 @@ span.prompt__icon {
     
     .thanks__content::after {
         top: 40%;
+    }
+}
+
+@media(max-width: 374px) {
+    .topic__title {
+        font-size: 20px;
     }
 }

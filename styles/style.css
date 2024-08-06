@@ -641,11 +641,11 @@
     }
 
     .hero::before {
-        content: url(../assets/images/hero-small-bg-right.png);
+        content: url(../assets/images/bg/hero-small-bg-right.png);
     }
     
     .hero::after {
-        content: url(../assets/images/hero-small-bg-left.png);
+        content: url(../assets/images/bg/hero-small-bg-left.png);
         bottom: 190px;
     }
 }
